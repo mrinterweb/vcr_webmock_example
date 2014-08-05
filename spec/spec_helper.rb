@@ -1,3 +1,5 @@
+# require File.expand_path("../rails_helper", __FILE__)
+require 'vcr'
 require 'webmock/rspec'
 
 RSpec.configure do |config|
@@ -65,7 +67,7 @@ WebMock.enable!
 VCR.configure do |c|
   c.configure_rspec_metadata!
   c.cassette_library_dir = 'spec/cassettes'
-  c.debug_logger = File.open("#{Rails.root}/log/vcr.log", 'w')
+  # c.debug_logger = File.open("#{Rails.root}/log/vcr.log", 'w')
   # Something seems to be messed up with VCR hooks
   c.hook_into :webmock, :excon
 end
