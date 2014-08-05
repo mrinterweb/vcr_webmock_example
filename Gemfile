@@ -21,12 +21,9 @@ gem 'sdoc', '~> 0.4.0',      group: :doc
 # gem 'debugger', group: [:development, :test]
 
 gem 'excon'
-gem 'pry'
-gem 'pry-nav'
 
 group :test do
   gem "rspec-rails"
   gem 'vcr'
   gem 'webmock'
-  gem "guard-rspec"
 end
